@@ -1,9 +1,7 @@
-Bash
-
 cat << 'EOF' > README.md
 <div align="center">
 
-<img src="https://img.shields.io/badge/AI_BUILDER_PORTFOLIO-PROJETO_04%2F05-10B981?style=for-the-badge&logo=probot&logoColor=white" alt="Projeto 04/05" />
+<img src="[https://img.shields.io/badge/AI_BUILDER_PORTFOLIO-PROJETO_04%2F05-10B981?style=for-the-badge&logo=probot&logoColor=white](https://img.shields.io/badge/AI_BUILDER_PORTFOLIO-PROJETO_04%2F05-10B981?style=for-the-badge&logo=probot&logoColor=white)" alt="Projeto 04/05" />
 
 # ⚡ FlowBridge AI — Zero-Backend Webhook & Event Connector
 ### Orquestração de Eventos, Enriquecimento Semântico com IA & Roteamento HTTP para n8n, Make e Zapier
@@ -26,22 +24,12 @@ cat << 'EOF' > README.md
 
 ```mermaid
 flowchart LR
-    A["⚡ Gatilho Operacional<br/>Portaria • Delivery • Zabbix • CRM"] --> B["🧠 AI Routing & SLA Engine<br/>Classificação P1–P3 & Canal"]
-    B --> C["📦 Enriched JSON Payload<br/>Metadados + Decisão de Roteamento"]
-    C -->|"HTTP POST (Live / Sandbox)"| D["🔗 Plataforma Destino<br/>n8n • Make • Zapier • Slack"]
-    C --> E["📟 Inspetor & Auditoria<br/>cURL Generator + Histórico HTTP"]
+    A["Gatilho Operacional<br/>Portaria • Delivery • Zabbix • CRM"] --> B["AI Routing & SLA Engine<br/>Classificação P1-P3 e Canal"]
+    B --> C["Enriched JSON Payload<br/>Metadados + Decisão de Roteamento"]
+    C -->|"HTTP POST (Live / Sandbox)"| D["Plataforma Destino<br/>n8n • Make • Zapier • Slack"]
+    C --> E["Inspetor & Auditoria<br/>cURL Generator + Histórico HTTP"]
 
-⚡ Arquitetura Funcional
-Módulo	Descrição Técnica	Impacto Operacional
-🎯 Gatilhos Multi-Domínio	4 cenários editáveis em tempo real: Controle de Acesso (Portaria), Delivery & Risco de SLA, Monitoramento de Redes (SNMP/Zabbix) e Triagem Comercial/CRM.	Padroniza eventos heterogêneos antes que cheguem aos fluxos de automação.
-🧠 AI Routing & SLA Engine	Analisa semanticamente o payload bruto, atribui severidade (P1_CRÍTICA, P2_ALTA, P3_NORMAL), define tempo máximo de SLA e sugere a ação automática.	Elimina triagem manual e acelera o escalonamento de incidentes críticos.
-🔗 Conector Live + Sandbox	Dispara HTTP POST real para URLs n8n, Make, Zapier ou Slack com suporte a Bearer Token e fallback inteligente no-cors para navegadores.	Permite testar integrações reais ou simular entregas sem depender de backend próprio.
-📟 Gerador Instantâneo de cURL	Compila automaticamente cada disparo enriquecido em comando cURL pronto para execução em terminais Linux e pipelines CI/CD.	Facilita a reprodutibilidade técnica e documentação de APIs para equipes de TI.
-📊 Trilha de Auditoria HTTP	Registra cada transação com Delivery ID único, código de status (200 OK / 202 Dispatched), timestamp e latência medida em milissegundos.	Garante rastreabilidade ponta a ponta em integrações críticas.
-📦 Exemplo de Payload Enriquecido
-
-Ao receber um evento bruto de controle de acesso ou infraestrutura, o motor FlowBridge AI injeta metadados de rastreabilidade e decisões de roteamento antes do disparo:
-JSON
+⚡ Arquitetura FuncionalMóduloDescrição TécnicaImpacto Operacional🎯 Gatilhos Multi-Domínio4 cenários editáveis em tempo real: Controle de Acesso (Portaria), Delivery & Risco de SLA, Monitoramento de Redes (SNMP/Zabbix) e Triagem Comercial/CRM.Padroniza eventos heterogêneos antes que cheguem aos fluxos de automação.🧠 AI Routing & SLA EngineAnalisa semanticamente o payload bruto, atribui severidade (P1_CRÍTICA, P2_ALTA, P3_NORMAL), define tempo máximo de SLA e sugere a ação automática.Elimina triagem manual e acelera o escalonamento de incidentes críticos.🔗 Conector Live + SandboxDispara HTTP POST real para URLs n8n, Make, Zapier ou Slack com suporte a Bearer Token e fallback inteligente no-cors para navegadores.Permite testar integrações reais ou simular entregas sem depender de backend próprio.📟 Gerador Instantâneo de cURLCompila automaticamente cada disparo enriquecido em comando cURL pronto para execução em terminais Linux e pipelines CI/CD.Facilita a reprodutibilidade técnica e documentação de APIs para equipes de TI.📊 Trilha de Auditoria HTTPRegistra cada transação com Delivery ID único, código de status (200 OK / 202 Dispatched), timestamp e latência medida em milissegundos.Garante rastreabilidade ponta a ponta em integrações críticas.📦 Exemplo de Payload EnriquecidoAo receber um evento bruto de controle de acesso ou infraestrutura, o motor FlowBridge AI injeta metadados de rastreabilidade e decisões de roteamento antes do disparo:
 
 {
   "event_meta": {
@@ -77,10 +65,8 @@ JSON
     Hospedagem & CI/CD: GitHub + Deploy Contínuo no Netlify
 
 💻 Como Executar Localmente
-Bash
-
 # 1. Clone o repositório
-git clone [https://github.com/Rafael777Trajano/flowbridge-webhook-connector.git](https://github.com/Rafael777Trajano/flowbridge-webhook-connector.git)
+git clone https://github.com/Rafael777Trajano/flowbridge-webhook-connector.git
 
 # 2. Acesse o diretório do projeto
 cd flowbridge-webhook-connector
@@ -91,25 +77,6 @@ npm install
 # 4. Inicie o servidor de desenvolvimento
 npm run dev
 
-🧩 Ecossistema de Projetos (Trilha AI Builder — 5 Soluções)
-#	Projeto	Foco Técnico	Status
-01	SentinelAI SOC Dashboard	Monitoramento SOC, visualização de alertas e triagem de segurança	✅ No Ar
-02	NetPulse AI Orchestrator	Orquestração multi-agente para logs de redes, diagnóstico OSI e SecOps	✅ No Ar
-03	StructuraAI Engine	Extração estruturada de dados e classificação operacional a partir de textos livres	✅ No Ar
-04	FlowBridge AI Connector (Este repositório)	Integração ágil de eventos operacionais via webhooks (n8n / Make / Zapier)	✅ No Ar
-05	OpsProtocol RAG Copilot	Copiloto de conformidade, consulta rápida a POPs e mediação de crises em tempo real	⏳ Em Breve (Roadmap)
-👨‍💻 Desenvolvido por Rafael Trajano
-
-Tecnólogo em Redes de Computadores  • Graduando em Sistemas de Informação
-
-AI Builder | Orquestração de Agentes | Automação de Sistemas | Segurança da Informação
-Enviar a atualização para o GitHub
-
-Logo em seguida, rode no mesmo terminal:
-Bash
-
-git add README.md
-git commit -m "docs: atualiza README profissional com arquitetura e link oficial do Netlify"
+🧩 Ecossistema de Projetos (Trilha AI Builder — 5 Soluções)#ProjetoFoco TécnicoStatus01SentinelAI SOC DashboardMonitoramento SOC, visualização de alertas e triagem de segurança✅ No Ar02NetPulse AI OrchestratorOrquestração multi-agente para logs de redes, diagnóstico OSI e SecOps✅ No Ar03StructuraAI EngineExtração estruturada de dados e classificação operacional a partir de textos livres✅ No Ar04FlowBridge AI Connector (Este repositório)Integração ágil de eventos operacionais via webhooks (n8n / Make / Zapier)✅ No Ar05OpsProtocol RAG CopilotCopiloto de conformidade, consulta rápida a POPs e mediação de crises em tempo real⏳ Em Breve (Roadmap)👨‍💻 Desenvolvido por Rafael TrajanoTecnólogo em Redes de Computadores  • Graduando em Sistemas de InformaçãoAI Builder | Orquestração de Agentes | Automação de Sistemas | Segurança da Informaçãogit add README.md
+git commit -m "fix: corrige fechamento do diagrama Mermaid no README"
 git push
-
-Agora são 4 de 5 projetos no ar! Assim que atualizar o GitHub, me avise para construirmos o 5º e último projeto: OpsProtocol RAG Copilot e fecharmos o portfólio completo.
