@@ -85,7 +85,7 @@ ${BT}
 <div align="center">
 
 ### 👨‍💻 Desenvolvido por **Rafael Trajano**
-*Tecnólogo em Redes de Computadores (Média 9,83) • Graduando em Sistemas de Informação*  
+*Tecnólogo em Redes de Computadores • Graduando em Sistemas de Informação*  
 **AI Builder | Orquestração de Agentes | Automação de Sistemas | Segurança da Informação**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafaatrjnbpbs47)
